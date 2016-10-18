@@ -1,6 +1,7 @@
 package main;
 
 import LL.LinkedList;
+import SQ.Queue;
 import SQ.Stack;
 
 public class DataStructures {
@@ -32,6 +33,18 @@ public class DataStructures {
 		while(testStack.isEmpty() == false) {
 			System.out.println(testStack.pop());
 		}
+
+		System.out.println("\n***********\n* Testing Queue:\n***********\n");
+		Queue<String> newQueue = new Queue<String>();
+		newQueue.Enqueue("I'm");
+		newQueue.Enqueue("Queue'd");
+		newQueue.Enqueue("Up");
+		newQueue.Enqueue("In dis");
+		newQueue.Enqueue("Bitch");
+		while(newQueue.isEmpty() == false) {
+			System.out.println(newQueue.Dequeue());
+		}
+
 	}
 
 }
