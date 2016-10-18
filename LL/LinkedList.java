@@ -64,6 +64,12 @@ public class LinkedList<T extends Comparable<T>> {
 		nodeCount ++;
 	}
 
+	public T get(int index) {
+		Node<T> retNode = findNodeAtIndex(index);
+		if(retNode == null) return null;
+		return retNode.value;
+	}
+
 	public boolean removeFirstOccurence(T val) {
 		Node<T> nodeToDelete = findFirstNodeOccurence(head, val);
 		if(nodeToDelete == null) return false;
@@ -126,6 +132,8 @@ public class LinkedList<T extends Comparable<T>> {
 		if(tail == nodeToDelete) {
 			tail = nodeToDelete.prev;
 		}
+
+		nodeCount--;
 	}
 
 	private Node<T> findFirstNodeOccurence(Node<T> startNode, T val) {
